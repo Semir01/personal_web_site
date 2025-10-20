@@ -1,0 +1,32 @@
+/* ========== FONTS ========== */
+
+@font-face {
+    font-family:Promt;
+    src: url("fonts/Prompt-Regular.ttf");
+}
+@font-face {
+    font-family:OleoScript;
+    src: url("fonts/OleoScript-Regular.ttf");
+}
+
+/* ========== GLOBAL STYLES ========== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Promt;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-image: url("images_and_icones/Group26.png");
+    background-size:cover;
+    background-position: center;
+}
