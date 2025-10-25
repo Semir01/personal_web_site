@@ -1,0 +1,25 @@
+# OS fajlovi
+.DS_Store
+Thumbs.db
+
+# VS Code postavke
+.vscode/
+
+# Build / cache folderi
+dist/
+build/
+node_modules/
+
+# Environment fajlovi (ako ikad koristiš)
+.env
+.env.local
+
+# Backup i privremeni fajlovi
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Ako koristiš git test grane / privremene foldere
+test/
+temp/
