@@ -40,6 +40,12 @@ body, html{
     height: 10%;
     padding-right: 30px;
 }
+.navigation-bar img{
+    position: absolute;
+    left: 30px;
+    width: 80px;
+    height: auto;
+}
 .nav-item{
     display: flex;
     justify-content: center;
