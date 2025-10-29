@@ -153,14 +153,55 @@ body, html{
 
 .line-detail-1{
     width: 70%;
-    height: 2px;
+    height: 1px;
     margin-right: 100px;
     background-color: white;
 }
 
 .line-detail-2{
     width: 70%;
-    height: 2px;
+    height: 1px;
     margin-left: 100px;
     background-color: white;
+}
+
+.detail-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.decore-line-1, .decore-line-2{
+    width: 40%;
+    height: 15px;
+    background-color: red;
+    border: 2px solid white;
+}
+
+.decore-line-1{
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 80px;
+    border-top-left-radius: 10px;
+    margin-left: 20px;
+}
+
+.decore-line-2{
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 80px;
+    border-top-right-radius: 10px;
+    margin-right: 20px;
+}
+
+.detail-modal img{
+    border: 2px solid white;
+    margin: 20px;
+    border-radius: 20%;
 }
