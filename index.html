@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Semir Jazvin</title>
+    <title>Personal web site</title>
+    <link rel="icon" type="image/png" href="images_and_icones/LogoNovi_SJ.png" />
 </head>
+
 <body>
     <div class="container">
         <nav class="navigation-bar">
-            <img src="images_and_icones/Logo SJ.png" alt="">
-            <div class="nav-item">Home</div>
-            <div class="nav-item">About</div>
-            <div class="nav-item">Work</div>
-            <div class="nav-item">Skills</div>
-            <div class="nav-item">Contact</div>
-            
+            <img src="images_and_icones/LogoNovi_SJ.png" alt="">
+            <a href="#home" class="nav-item">Home</a>
+            <a href="#about" class="nav-item">About</a>
+            <a href="#work" class="nav-item">Work</a>
+            <a href="#skills" class="nav-item">Skills</a>
+            <a href="#contact" class="nav-item">Contact</a>
         </nav>
         <div class="main-container">
-
+            <div class="text-content-home">
+                <p class="title">I am Semir Jazvin</p>
+                <div class="line-detail-1"></div>
+                <div class="line-detail-2"></div>
+                <p class="main-text">
+                    Hi there, and welcome! <br>
+                    This is my personal space where I share who I am, what I do, and what I’ve learned along the way.
+                    <br>
+                    Feel free to look around — you might find something useful or interesting!
+                </p>
+                <div class="line-detail-1"></div>
+                <div class="line-detail-2"></div>
+                <div class="button-home-section">
+                    <button class="read-more">Read more</button>
+                    <button class="lets-talk">Let's talk</button>
+                </div>
+            </div>
+            <div class="image-content-home">
+            </div>
         </div>
     </div>
-    
+    <div class="detail-modal" id="loading-screen">
+        <img src="images_and_icones/LogoNovi_SJ.png" alt="" class="loading-logo">
+    </div>
 </body>
 <script src="script.js"></script>
+
 </html>

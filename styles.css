@@ -1,4 +1,4 @@
-/* ========== FONTS ========== */
+/* ========== Fonts ========== */
 
 @font-face {
     font-family:Promt;
@@ -9,7 +9,7 @@
     src: url("fonts/OleoScript-Regular.ttf");
 }
 
-/* ========== GLOBAL STYLES ========== */
+/* ========== Global styles ========== */
 *{
     margin: 0;
     padding: 0;
@@ -31,7 +31,7 @@ body, html{
     background-repeat: no-repeat;
     background-position: center;
 }
-/* ========== NAVIGATION BAR & MAIN CONTAINER ========== */
+/* ========== Navigation bar & Main container ========== */
 .navigation-bar{
     display: flex;
     align-items: center;
@@ -42,29 +42,171 @@ body, html{
 }
 .navigation-bar img{
     position: absolute;
-    left: 30px;
+    left: 40px;
     width: 80px;
     height: auto;
+    border: 2px solid red;
+    border-radius: 20%;
 }
 .nav-item{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 130px;
+    width: 150px;
     height: 30px;
     cursor: pointer;
     color: black;
     font-size: 20px;
     font-family: OleoScript;
     font-weight: semi-bold;
+    text-decoration: none;
+    padding: 8px;
+    margin: 5px;
 }
 .nav-item:hover{
     border-bottom: 3px solid red;
-    border-radius: 10px
+    border-radius: 8px;
 }
 .main-container{
     display: flex;
     background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 80%;
+    border: 2px solid black;
 }
+
+/* ========== Text & Image Container ========== */
+.text-content-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    gap: 20px;
+}
+
+.text-content-home .title{
+    font-size: 60px;
+    font-family: OleoScript;
+    letter-spacing: 2px;
+    width: 70%;
+}
+
+.text-content-home .main-text{
+    font-size: 24px;
+    width: 70%;
+}
+
+.text-content-home .button-home-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.button-home-section button{
+    width: 250px;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: OleoScript;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.button-home-section .read-more{
+    border: 2px solid white;
+    background-color: red;
+    color: white;
+}
+
+.button-home-section .lets-talk{
+    border: 2px solid red;
+    background-color: white;
+    color: red;
+}
+
+.button-home-section .read-more:hover{
+   background-color: rgba(255, 7, 7, 0.322);
+}
+
+.button-home-section .lets-talk:hover{
+   background-color: rgba(255, 255, 255, 0.322);
+}
+
+.image-content-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+    background-image: url("images_and_icones/Semir_home_image.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.image-content-home img{
+    width: 70.%;
+    height: 100%;
+    margin-top: 2.5%;
+}
+
+/* ========== Decore and details ========== */
+
+.line-detail-1{
+    width: 70%;
+    height: 1px;
+    margin-right: 100px;
+    background-color: white;
+}
+
+.line-detail-2{
+    width: 70%;
+    height: 1px;
+    margin-left: 100px;
+    background-color: white;
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.loading-logo {
+  width: 500px;
+  height: auto;
+  animation: pulse 2s infinite ease-in-out;
+  border: 5px solid red;
+  border-radius: 20%;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+}
+
+#loading-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+
