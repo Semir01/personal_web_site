@@ -34,7 +34,7 @@
                 <div class="line-detail-2"></div>
                 <div class="button-home-section">
                     <button class="read-more" id="btnReadMore">Read more</button>
-                    <button class="lets-talk">Let's talk</button>
+                    <button class="lets-talk" id="btnLetsTalk">Let's talk</button>
                 </div>
             </div>
             <div class="image-content-home">
@@ -43,6 +43,24 @@
     </div>
     <div class="detail-modal" id="loading-screen">
         <img src="images_and_icones/LogoNovi_SJ.png" alt="" class="loading-logo">
+    </div>
+
+    <div class="overlayer" id="overlayer"></div>
+    <div class="content-modal" id="message-toMe-modal">
+        <div class="header-message">
+            <h2>Message to Me</h2>
+            <span class="close-button" id="close-message-toMe">&times;</span>
+        </div>
+        <div class="main-content-message">
+            <p>Feel free to drop me a message anytime!</p>
+            <textarea name="message-toMe" id="message-toMe" placeholder="Write your message here..."></textarea>
+            <div class="message-control-section">
+                <button class="clear-all-content" id="clear-all-content-message">Clear all</button>
+            </div>
+        </div>
+        <div class="footer-message">
+            <button class="send-message" id="send-message-toMe">Send</button>
+        </div>
     </div>
 </body>
 <script src="script.js"></script>

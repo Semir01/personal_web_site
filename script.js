@@ -1,6 +1,6 @@
 /*  ============================ Variables ============================  */
 const btnReadMore = document.getElementById("btnReadMore");
-
+const btnLetsTalk = document.getElementById("btnLetsTalk");
 
 
 
@@ -13,16 +13,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     SetActivePage();
 
-    const btnReadMore = document.getElementById("btnReadMore");
     if (btnReadMore) {
         btnReadMore.addEventListener("click", () => {
             window.location.href = "about.html";
         });
     }
+
+    if( btnLetsTalk ) {
+        btnLetsTalk.addEventListener("click", () => {
+            const messageModal = document.getElementById("message-toMe-modal");
+            const modalOverlay = document.getElementById("overlayer");
+
+            if (messageModal && modalOverlay) {
+                messageModal.style.display = "flex";
+                modalOverlay.style.display = "flex";    
+            }
+        });
+    }
 });
-
-
-
 /*  ============================ Functions ============================  */
 
 function LoadingScreen() {
