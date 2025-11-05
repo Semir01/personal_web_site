@@ -1,8 +1,26 @@
+/*  ============================ Variables ============================  */
+const btnReadMore = document.getElementById("btnReadMore");
+
+
+
+
+
 /*  ============================ Event Listeners ============================  */
 document.addEventListener("DOMContentLoaded", () => {
-    LoadingScreen();
+    if (typeof LoadingScreen === "function") {
+        LoadingScreen();
+    }
+
     SetActivePage();
+
+    const btnReadMore = document.getElementById("btnReadMore");
+    if (btnReadMore) {
+        btnReadMore.addEventListener("click", () => {
+            window.location.href = "about.html";
+        });
+    }
 });
+
 
 
 /*  ============================ Functions ============================  */
@@ -16,13 +34,16 @@ function LoadingScreen() {
     }, 2000);
 }
 
-function SetActivePage(){
+function SetActivePage() {
     const currentPage = window.location.pathname.split("/").pop();
     const navLinks = document.querySelectorAll(".nav-item");
 
-    navLinks.forEach(link=>{
-        if(link.getAttribute("href") === currentPage){
+    navLinks.forEach(link => {
+        const href = link.getAttribute("href");
+        if (href && href.includes(currentPage)) {
             link.classList.add("active");
+        } else {
+            link.classList.remove("active");
         }
-    })
+    });
 }
