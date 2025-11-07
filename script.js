@@ -1,9 +1,12 @@
 /*  ============================ Variables ============================  */
+/* Button Elements */
 const btnReadMore = document.getElementById("btnReadMore");
 const btnLetsTalk = document.getElementById("btnLetsTalk");
+const btnCloseMessageToMe = document.getElementById("btnCloseMessageToMe-modal");
 
-
-
+/* Modal Elements */
+const messageModal = document.getElementById("message-toMe-modal");
+const modalOverlay = document.getElementById("overlayer");
 
 /*  ============================ Event Listeners ============================  */
 document.addEventListener("DOMContentLoaded", () => {
@@ -19,17 +22,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    if( btnLetsTalk ) {
+    if (btnLetsTalk) {
         btnLetsTalk.addEventListener("click", () => {
-            const messageModal = document.getElementById("message-toMe-modal");
-            const modalOverlay = document.getElementById("overlayer");
+
 
             if (messageModal && modalOverlay) {
                 messageModal.style.display = "flex";
-                modalOverlay.style.display = "flex";    
+                modalOverlay.style.display = "flex";
             }
         });
     }
+
+    if (btnCloseMessageToMe) {
+        btnCloseMessageToMe.addEventListener("click", () => {
+            messageModal.style.display = "none";
+            modalOverlay.style.display = "none";
+        })
+    }
+
 });
 /*  ============================ Functions ============================  */
 
@@ -45,13 +55,28 @@ function LoadingScreen() {
 function SetActivePage() {
     const currentPage = window.location.pathname.split("/").pop();
     const navLinks = document.querySelectorAll(".nav-item");
+    const navIcon = document.querySelectorAll(".nav-icon");
 
-    navLinks.forEach(link => {
-        const href = link.getAttribute("href");
-        if (href && href.includes(currentPage)) {
-            link.classList.add("active");
-        } else {
-            link.classList.remove("active");
-        }
-    });
+    if (navLinks) {
+        navLinks.forEach(link => {
+            const href = link.getAttribute("href");
+            if (href && href.includes(currentPage)) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
+            }
+        });
+    }
+
+    if(navIcon){
+         navIcon.forEach(link => {
+            const href = link.getAttribute("href");
+            if (href && href.includes(currentPage)) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
+            }
+        });
+    }
+
 }

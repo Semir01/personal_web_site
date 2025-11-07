@@ -11,14 +11,7 @@
 
 <body>
     <div class="container">
-        <nav class="navigation-bar">
-            <img src="images_and_icones/LogoNovi_SJ.png" alt="">
-            <a href="index.html" class="nav-item">Home</a>
-            <a href="about.html" class="nav-item">About</a>
-            <a href="" class="nav-item">Work</a>
-            <a href="" class="nav-item">Skills</a>
-            <a href="" class="nav-item">Contact</a>
-        </nav>
+        <div id="nav-placeholder"></div>
         <div class="main-container">
             <div class="text-content-home">
                 <p class="title">I am Semir Jazvin</p>
@@ -41,6 +34,7 @@
             </div>
         </div>
     </div>
+
     <div class="detail-modal" id="loading-screen">
         <img src="images_and_icones/LogoNovi_SJ.png" alt="" class="loading-logo">
     </div>
@@ -49,7 +43,7 @@
     <div class="content-modal" id="message-toMe-modal">
         <div class="header-message">
             <h2>Message to Me</h2>
-            <span class="close-button" id="close-message-toMe">&times;</span>
+            <span class="close-button" id="btnCloseMessageToMe-modal">&times;</span>
         </div>
         <div class="main-content-message">
             <p>Feel free to drop me a message anytime!</p>
@@ -63,5 +57,6 @@
         </div>
     </div>
 </body>
+<script src="nav.js"></script>
 <script src="script.js"></script>
 </html>
