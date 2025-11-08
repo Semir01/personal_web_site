@@ -252,9 +252,8 @@ html {
     height: 100%;
     margin-top: 2.5%;
 }
+
 /*Home Section End*/
-
-
 
 /* ========== Decore and details ========== */
 
@@ -278,7 +277,6 @@ html {
     width: 500px;
     height: auto;
     animation: pulse 2s infinite ease-in;
-    ;
     border-radius: 10%;
     border: 10px double red;
 }
@@ -302,6 +300,8 @@ html {
     visibility: hidden;
 }
 
+/*Loading Screen end*/
+
 .nav-item.active {
     border-bottom: 3px solid red;
     border-radius: 8px;
@@ -312,7 +312,6 @@ html {
     background-color: rgba(255, 255, 255, 0.637);
     border-radius: 8px;
 }
-/*Loading Screen end*/
 
 /*Home Section Details Start*/
 .line-detail-1 {
@@ -328,6 +327,7 @@ html {
     margin-left: 100px;
     background-color: white;
 }
+
 /*Home Section Details End*/
 
 /* ========== Modal styles ========== */
@@ -489,11 +489,12 @@ html {
 /* ========== RESPONSIVE STYLES ========== */
 /* Adjust styles for screens smaller than 768px */
 @media (min-width: 361px) and (max-width: 480px) {
+
     /* Container Responsive Start */
-    .container{
-       height: 800px;
-       background-image: url("images_and_icones/Android\ Medium\ -\ 2.png");
-       background-size: cover;
+    .container {
+        height: 800px;
+        background-image: url("images_and_icones/Android\ Medium\ -\ 2.png");
+        background-size: cover;
     }
 
     /* Navigation Bar & Main Container Responsive Start */
@@ -531,7 +532,7 @@ html {
     .text-content-home {
         width: 100%;
         height: 40%;
-        gap: 5px;
+        gap: 10px;
         margin-top: 30px;
     }
 
@@ -550,7 +551,7 @@ html {
         height: 35px;
         width: 100%;
         justify-content: center;
-        gap: 50px;
+        gap: 30px;
     }
 
     .button-home-section button {
@@ -562,11 +563,74 @@ html {
     .image-content-home {
         width: 100%;
         height: 60%;
+        background-size: cover;
     }
 
     .image-content-home img {
         width: 100%;
         height: 100%;
     }
+
     /*Home Section Responsive End*/
+
+    /*Loading Screen Responsive Start*/
+    .loading-logo {
+        width: 200px;
+    }
+
+
+    /*Home Section Details Start*/
+    .line-detail-1 {
+        width: 90%;
+        margin-right: 30px;
+    }
+
+    .line-detail-2 {
+        width: 90%;
+        margin-left: 30px;
+    }
+
+    /*Home Section Details End*/
+
+    .content-modal {
+        width: 300px;
+        height: 500px;
+    }
+
+    .header-message,
+    .footer-message {
+        height: 40px;
+    }
+
+    .header-message h2 {
+        font-size: 20px;
+    }
+
+    .header-message #btnCloseMessageToMe-modal {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer-message .send-message {
+        width: 100px;
+        height: 25px;
+        font-size: 16px;
+    }
+
+    .main-content-message p,
+    .message-control-section {
+        width: 90%;
+        height: 10%;
+        font-size: 16px;
+    }
+
+    .main-content-message textarea {
+        width: 95%;
+        height: 80%;
+        font-size: 14px;
+    }
+
+    .message-control-section .clear-all-content {
+        font-size: 14px;
+    }
 }
