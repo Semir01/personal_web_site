@@ -3,6 +3,8 @@
 const btnReadMore = document.getElementById("btnReadMore");
 const btnLetsTalk = document.getElementById("btnLetsTalk");
 const btnCloseMessageToMe = document.getElementById("btnCloseMessageToMe-modal");
+const btnSendMessageToMe = document.getElementById("send-message-toMe");
+const btnCelarMessageToMe = document.getElementById("clear-all-content-message");
 
 /* Modal Elements */
 const messageModal = document.getElementById("message-toMe-modal");
@@ -40,6 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+    if( btnCelarMessageToMe){
+        btnCelarMessageToMe.addEventListener("click", () => {
+            const inputFields = messageModal.querySelectorAll("input, textarea");
+            inputFields.forEach(field => field.value = "");
+        });
+    }
 });
 /*  ============================ Functions ============================  */
 
