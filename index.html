@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>Personal web site</title>
     <link rel="icon" type="image/png" href="images_and_icones/LogoNovi_SJ.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -47,6 +48,7 @@
         </div>
         <div class="main-content-message">
             <p>Feel free to drop me a message anytime!</p>
+            <input type="email" name="email-toMe" id="sender-email" placeholder="Message from: (Your email or name)">
             <textarea name="message-toMe" id="message-toMe" placeholder="Write your message here..."></textarea>
             <div class="message-control-section">
                 <button class="clear-all-content" id="clear-all-content-message">Clear all</button>
