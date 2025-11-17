@@ -448,9 +448,27 @@ html {
     font-size: 24px;
 }
 
+.main-content-message #sender-email {
+    width: 90%;
+    height: 25px;
+    border: none;
+    border-bottom: 2px solid black;
+    margin-bottom: 30px;
+    outline: none;
+    padding-left: 5px;
+    font-size: 16px;
+    font-family: Promt;
+}
+
+.main-content-message #sender-email:focus {
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+}
+
 .main-content-message textarea {
     width: 90%;
-    height: 70%;
+    height: 65%;
     border: 2px solid black;
     border-radius: 8px;
     padding: 10px;
@@ -485,6 +503,9 @@ html {
 }
 
 /*Message to Me Modal End*/
+
+
+
 
 /* ========== RESPONSIVE STYLES ========== */
 /* Adjust styles for screens smaller than 768px */
@@ -622,6 +643,14 @@ html {
         width: 90%;
         height: 10%;
         font-size: 16px;
+    }
+
+    .main-content-message #sender-email {
+        width: 90%;
+        height: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 12px;
     }
 
     .main-content-message textarea {
