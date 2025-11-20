@@ -116,11 +116,6 @@ html {
     top: 22%;
 }
 
-.menu-icon:hover+.drop-down-menu,
-.drop-down-menu:hover {
-    display: flex;
-}
-
 .drop-down-menu {
     width: 280px;
     height: 30px;
@@ -156,7 +151,6 @@ html {
     width: 25px;
     height: 25px;
 }
-
 
 /* Main Container Styles */
 .main-container {

@@ -10,9 +10,7 @@ const btnCelarMessageToMe = document.getElementById("clear-all-content-message")
 const messageModal = document.getElementById("message-toMe-modal");
 const modalOverlay = document.getElementById("overlayer");
 
-
-emailjs.init("M19Ub3fyi1nfEbstB");
-
+//emailjs.init("M19Ub3fyi1nfEbstB");
 
 /*  ============================ Event Listeners ============================  */
 document.addEventListener("DOMContentLoaded", () => {
@@ -30,8 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (btnLetsTalk) {
         btnLetsTalk.addEventListener("click", () => {
-
-
             if (messageModal && modalOverlay) {
                 messageModal.style.display = "flex";
                 modalOverlay.style.display = "flex";
@@ -46,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+    /*
     if (btnSendMessageToMe) {
         btnSendMessageToMe.addEventListener("click", () => {
             const userEmail = document.getElementById("sender-email").value;
@@ -77,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
         });
     }
+    */
 
     if (btnCelarMessageToMe) {
         btnCelarMessageToMe.addEventListener("click", () => {
