@@ -1,25 +1,31 @@
 /*  ============================ Variables ============================  */
-/* Button Elements */
+/* Button Elements Home page*/
 const btnReadMore = document.getElementById("btnReadMore");
 const btnLetsTalk = document.getElementById("btnLetsTalk");
 const btnCloseMessageToMe = document.getElementById("btnCloseMessageToMe-modal");
 const btnSendMessageToMe = document.getElementById("send-message-toMe");
 const btnCelarMessageToMe = document.getElementById("clear-all-content-message");
 
-/* Modal Elements */
+/* Modal Elements  Home page */
 const messageModal = document.getElementById("message-toMe-modal");
 const modalOverlay = document.getElementById("overlayer");
+
+/* Buttton Elements About page */
+
+
 
 //emailjs.init("M19Ub3fyi1nfEbstB");
 
 /*  ============================ Event Listeners ============================  */
 document.addEventListener("DOMContentLoaded", () => {
+
+    /* ===================== General JS code ===================== */
     if (typeof LoadingScreen === "function") {
         LoadingScreen();
     }
-
     SetActivePage();
 
+    /* ===================== Home Page JS code ===================== */
     if (btnReadMore) {
         btnReadMore.addEventListener("click", () => {
             window.location.href = "about.html";
@@ -82,9 +88,33 @@ document.addEventListener("DOMContentLoaded", () => {
             inputFields.forEach(field => field.value = "");
         });
     }
+
+    /* ===================== About Page JS code ===================== */
+    const slider = document.querySelector(".slider");
+    const slides = document.querySelectorAll(".slide");
+    let index = 0;
+
+    document.querySelector(".arrow.right").addEventListener("click", () => {
+        index++;
+        if (index >= slides.length) index = 0; // reset – kružno
+        updateSlider();
+    });
+
+    document.querySelector(".arrow.left").addEventListener("click", () => {
+        index--;
+        if (index < 0) index = slides.length - 1;
+        updateSlider();
+    });
+    
+    function updateSlider() {
+        slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
 });
+
 /*  ============================ Functions ============================  */
 
+/*General Functions*/
 function LoadingScreen() {
     const loadingScreen = document.getElementById("loading-screen");
     loadingScreen.classList.remove("hidden");
@@ -92,33 +122,4 @@ function LoadingScreen() {
     setTimeout(() => {
         loadingScreen.classList.add("hidden");
     }, 2000);
-}
-
-function SetActivePage() {
-    const currentPage = window.location.pathname.split("/").pop();
-    const navLinks = document.querySelectorAll(".nav-item");
-    const navIcon = document.querySelectorAll(".nav-icon");
-
-    if (navLinks) {
-        navLinks.forEach(link => {
-            const href = link.getAttribute("href");
-            if (href && href.includes(currentPage)) {
-                link.classList.add("active");
-            } else {
-                link.classList.remove("active");
-            }
-        });
-    }
-
-    if (navIcon) {
-        navIcon.forEach(link => {
-            const href = link.getAttribute("href");
-            if (href && href.includes(currentPage)) {
-                link.classList.add("active");
-            } else {
-                link.classList.remove("active");
-            }
-        });
-    }
-
-}
+} 
