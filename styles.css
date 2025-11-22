@@ -161,7 +161,7 @@ html {
     border: 2px solid black;
 }
 
-/* ========== Text & Image Container ========== */
+/* ========== Main Container ========== */
 
 /*Home Section Start*/
 .text-content-home {
@@ -246,8 +246,20 @@ html {
     height: 100%;
     margin-top: 2.5%;
 }
-
 /*Home Section End*/
+
+/* ======================================================================================================*/
+
+/* About Section Start*/
+
+
+
+
+
+
+
+/* About Section End*/
+/* ======================================================================================================*/
 
 /* ========== Decore and details ========== */
 
