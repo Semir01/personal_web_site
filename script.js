@@ -11,8 +11,8 @@ const messageModal = document.getElementById("message-toMe-modal");
 const modalOverlay = document.getElementById("overlayer");
 
 /* Buttton Elements About page */
-
-
+const bntShowHobbyWriting = document.getElementById("btnShow-hobby-writing");
+const btnShowHobbyWoodworkingKnife = document.getElementById("btnShow-hobby-wood-knife");
 
 //emailjs.init("M19Ub3fyi1nfEbstB");
 
@@ -105,11 +105,22 @@ document.addEventListener("DOMContentLoaded", () => {
         if (index < 0) index = slides.length - 1;
         updateSlider();
     });
-    
+
     function updateSlider() {
         slider.style.transform = `translateX(-${index * 100}%)`;
     }
 
+    if(bntShowHobbyWriting){
+        bntShowHobbyWriting.addEventListener("click", ()=>{
+            window.location.href = "work.html";
+        })
+    }
+
+    if(btnShowHobbyWoodworkingKnife){
+        btnShowHobbyWoodworkingKnife.addEventListener("click", ()=>{
+            window.location.href = "work.html";
+        });
+    }
 });
 
 /*  ============================ Functions ============================  */

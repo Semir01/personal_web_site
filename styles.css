@@ -118,16 +118,16 @@ html {
 
 .drop-down-menu {
     width: 280px;
-    height: 30px;
-    border: 2px solid black;
+    height: 40px;
+    border: 1px solid black;
     background-color: red;
     display: none;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     position: absolute;
-    top: 10px;
-    right: 67px;
+    top: 5px;
+    right: 62px;
     border-radius: 8px;
 }
 
@@ -136,8 +136,8 @@ html {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    width: 35px;
-    height: 30px;
+    width: 45px;
+    height: 40px;
     cursor: pointer;
 }
 
@@ -229,7 +229,8 @@ html {
     background-color: rgba(255, 255, 255, 0.322);
 }
 
-.image-content-home, .image-content-about{
+.image-content-home,
+.image-content-about {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,16 +241,17 @@ html {
     background-size: contain;
     background-position: center;
 }
+
 /*Home Section End*/
 
 /* ======================================================================================================*/
 
 /* About Section Start*/
-.image-content-about{
+.image-content-about {
     background-image: url("images_and_icones/Semir_about_page.png")
 }
 
-.about-me-content-container{
+.about-me-content-container {
     width: 65%;
     height: 100%;
     color: white;
@@ -262,7 +264,7 @@ html {
 
 .slider {
     display: flex;
-    width: 400%; 
+    width: 400%;
     height: 100%;
     transition: transform 0.5s ease;
 }
@@ -273,12 +275,13 @@ html {
     flex-shrink: 0;
     display: flex;
     align-items: start;
-    justify-content: start;
-    flex-direction: column;    
-    padding: 50px;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
-.slide p{
+.slide p {
     font-family: Promt;
     font-size: 20px;
     line-height: 1.6;
@@ -291,8 +294,8 @@ html {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding: 40px 10px;
-    background: rgba(0,0,0,0.4);
+    padding: 90px 10px;
+    background: rgba(0, 0, 0, 0.4);
     color: white;
     border: none;
     cursor: pointer;
@@ -301,11 +304,19 @@ html {
     border-radius: 5px;
 }
 
-.arrow.left { left: 10px; }
-.arrow.right { right: 10px; }
-.arrow:hover { background: rgba(0,0,0,0.7); }
+.arrow.left {
+    left: 10px;
+}
 
-.slide h2{
+.arrow.right {
+    right: 10px;
+}
+
+.arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.slide h2 {
     font-family: OleoScript;
     font-size: 36px;
     margin-bottom: 20px;
@@ -315,12 +326,12 @@ html {
     padding-left: 20px;
 }
 
-.aboutMe-container p{
+.aboutMe-container p {
     margin-bottom: 20px;
     border: none;
 }
 
-.info-card-container{
+.info-card-container {
     width: 100%;
     height: 100px;
     display: flex;
@@ -329,13 +340,20 @@ html {
     gap: 100px;
 }
 
-.info-card-container img{
+.info-card-container img {
     width: 90px;
     height: 90px;
     border: 2px solid red;
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.6);
     padding: 5px;
+}
+
+.hobby-writing:hover,
+.hoby-woodworking-knife:hover {
+    cursor: pointer;
+    border-left: 5px solid white;
+    border-radius: 8px;
 }
 
 /* About Section End*/
@@ -387,8 +405,6 @@ html {
     visibility: hidden;
 }
 
-/*Loading Screen end*/
-
 .nav-item.active {
     border-bottom: 3px solid red;
     border-radius: 8px;
@@ -399,6 +415,8 @@ html {
     background-color: rgba(255, 255, 255, 0.637);
     border-radius: 8px;
 }
+
+/*Loading Screen end*/
 
 /*Home Section Details Start*/
 .line-detail-1 {
@@ -417,8 +435,8 @@ html {
 
 /*Home Section Details End*/
 
-/* ========== Modal styles ========== */
 
+/* ========== Modal styles ========== */
 .overlayer {
     position: fixed;
     top: 0;
@@ -591,16 +609,13 @@ html {
 
 /*Message to Me Modal End*/
 
-
-
-
 /* ========== RESPONSIVE STYLES ========== */
 /* Adjust styles for screens smaller than 768px */
 @media (min-width: 361px) and (max-width: 480px) {
 
     /* Container Responsive Start */
     .container {
-        height: 800px;
+        height: 1000px;
         background-image: url("images_and_icones/Android\ Medium\ -\ 2.png");
         background-size: cover;
     }
@@ -630,11 +645,16 @@ html {
 
     .main-container {
         flex-direction: column;
-        height: 93%;
+        height: 100%;
         gap: 20px;
     }
 
     /* Navigation Bar & Main Container Responsive End */
+
+    /*Loading Screen Responsive Start*/
+    .loading-logo {
+        width: 200px;
+    }
 
     /*Home Section Responsive Start*/
     .text-content-home {
@@ -650,8 +670,8 @@ html {
     }
 
     .text-content-home .main-text {
-        font-size: 14px;
-        width: 80%;
+        font-size: 16px;
+        width: 100%;
         padding: 5px;
     }
 
@@ -670,22 +690,11 @@ html {
 
     .image-content-home {
         width: 100%;
-        height: 60%;
+        height: 500px;
         background-size: cover;
     }
 
-    .image-content-home img {
-        width: 100%;
-        height: 100%;
-    }
-
     /*Home Section Responsive End*/
-
-    /*Loading Screen Responsive Start*/
-    .loading-logo {
-        width: 200px;
-    }
-
 
     /*Home Section Details Start*/
     .line-detail-1 {
@@ -700,6 +709,7 @@ html {
 
     /*Home Section Details End*/
 
+    /*Modal messages responsive start*/
     .content-modal {
         width: 300px;
         height: 500px;
@@ -749,4 +759,75 @@ html {
     .message-control-section .clear-all-content {
         font-size: 14px;
     }
+
+    /*Modal messages responsive end*/
+
+    /*About page responsive start*/
+    .image-content-about {
+        width: 100%;
+        background-position: center;
+    }
+
+    .about-me-content-container {
+        width: 100%;
+        height: 200%;
+        margin-top: 10px;
+    }
+
+    .about-me-content-container button {
+        display: none;
+    }
+
+    .slider {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        overflow: auto;
+        gap: 20px;
+    }
+
+    .slide {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .slide h2 {
+        font-size: 24px;
+        border-top: 2px solid white;
+    }
+
+    .slide p {
+        font-size: 16px;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .info-card-container {
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        padding: 5px;
+    }
+
+    .info-card-container img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .info-card-container p {
+        text-align: center;
+        width: 100%;
+        border: none;
+    }
+
+    .hobby-writing:hover,
+    .hoby-woodworking-knife:hover {
+        border-left: none;
+        border-bottom: 3px solid white;
+        border-radius: 8px;
+    }
+    /*About page responsive end*/
 }
