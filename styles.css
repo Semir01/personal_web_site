@@ -118,16 +118,16 @@ html {
 
 .drop-down-menu {
     width: 280px;
-    height: 30px;
-    border: 2px solid black;
+    height: 40px;
+    border: 1px solid black;
     background-color: red;
     display: none;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     position: absolute;
-    top: 10px;
-    right: 67px;
+    top: 5px;
+    right: 62px;
     border-radius: 8px;
 }
 
@@ -136,8 +136,8 @@ html {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    width: 35px;
-    height: 30px;
+    width: 45px;
+    height: 40px;
     cursor: pointer;
 }
 
@@ -615,7 +615,7 @@ html {
 
     /* Container Responsive Start */
     .container {
-        height: 800px;
+        height: 1000px;
         background-image: url("images_and_icones/Android\ Medium\ -\ 2.png");
         background-size: cover;
     }
@@ -645,7 +645,7 @@ html {
 
     .main-container {
         flex-direction: column;
-        height: 93%;
+        height: 100%;
         gap: 20px;
     }
 
@@ -670,8 +670,8 @@ html {
     }
 
     .text-content-home .main-text {
-        font-size: 14px;
-        width: 80%;
+        font-size: 16px;
+        width: 100%;
         padding: 5px;
     }
 
@@ -690,13 +690,8 @@ html {
 
     .image-content-home {
         width: 100%;
-        height: 60%;
+        height: 500px;
         background-size: cover;
-    }
-
-    .image-content-home img {
-        width: 100%;
-        height: 100%;
     }
 
     /*Home Section Responsive End*/
@@ -768,10 +763,6 @@ html {
     /*Modal messages responsive end*/
 
     /*About page responsive start*/
-    .about-me-page-container {
-        height: 1500px;
-    }
-
     .image-content-about {
         width: 100%;
         background-position: center;
@@ -838,6 +829,5 @@ html {
         border-bottom: 3px solid white;
         border-radius: 8px;
     }
-
     /*About page responsive end*/
 }
