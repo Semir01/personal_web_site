@@ -159,6 +159,8 @@ html {
     width: 100%;
     height: 80%;
     border: 2px solid black;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ========== Main Container ========== */
@@ -659,9 +661,10 @@ html {
     /*Home Section Responsive Start*/
     .text-content-home {
         width: 100%;
-        height: 40%;
-        gap: 10px;
-        margin-top: 30px;
+        height: 42%;
+        gap: 105x;
+        margin-top: 40px;
+        justify-content: none;
     }
 
     .text-content-home .title {
@@ -765,7 +768,7 @@ html {
     /*About page responsive start*/
     .image-content-about {
         width: 100%;
-        background-position: center;
+        height: 1500px;
     }
 
     .about-me-content-container {
@@ -806,27 +809,23 @@ html {
     }
 
     .info-card-container {
-        flex-direction: column;
         gap: 10px;
         height: auto;
         padding: 5px;
     }
 
     .info-card-container img {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
 
     .info-card-container p {
-        text-align: center;
-        width: 100%;
         border: none;
     }
 
     .hobby-writing:hover,
     .hoby-woodworking-knife:hover {
-        border-left: none;
-        border-bottom: 3px solid white;
+        border-left: 3px solid white;
         border-radius: 8px;
     }
     /*About page responsive end*/
